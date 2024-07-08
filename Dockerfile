@@ -1,5 +1,5 @@
 # Use an official Node.js image as the base image - alphine based image
-FROM node:20-alpine
+FROM cgr.dev/chainguard/node
 
 # Create a directory for your app
 RUN mkdir -p /app
