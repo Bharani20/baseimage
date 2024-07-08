@@ -11,14 +11,14 @@ WORKDIR /app
 # RUN apk update && apk upgrade && apk add --update tini curl wget git
 
 # Copy the package.json and package-lock.json files to the container
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 # Install npm dependencies
 RUN npm install
 
 # Switch to a non-root user for added security
-RUN addgroup -S nodejs && adduser -S -G nodejs nodejs
-USER nodejs
+# RUN addgroup -S nodejs && adduser -S -G nodejs nodejs
+# USER nodejs
 
 # Copy the rest of your application files
 COPY . .
