@@ -8,7 +8,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Install necessary packages, including tini for signal handling
-RUN apk update && apk upgrade && apk add --update tini curl wget git
+# RUN apk update && apk upgrade && apk add --update tini curl wget git
 
 # Copy the package.json and package-lock.json files to the container
 COPY package.json package-lock.json ./
